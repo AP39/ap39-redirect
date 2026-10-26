@@ -9,7 +9,8 @@
 <meta http-equiv="refresh" content="0; url=https://ap39.site/repo">
 <script>
   // Keep the path, query and hash when forwarding to the new domain.
-  location.replace("https://ap39.site" + (location.pathname.replace(//+$/, "") || "/") + location.search + location.hash);
+  var p = location.pathname; while (p.length > 1 && p.slice(-1) === "/") p = p.slice(0, -1);
+  location.replace("https://ap39.site" + p + location.search + location.hash);
 </script>
 <style>body{background:#000;color:#fff;font:16px/1.5 system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#fff}</style>
 </head>
